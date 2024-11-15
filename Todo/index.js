@@ -18,7 +18,7 @@ const todoRoutes = require("./routes/todo");
 
 // Use the imported routes for any requests starting with /api/v1
 app.use("/api/v1", todoRoutes);
-
+ 
 // Start the server and listen on the specified port
 app.listen(PORT, () => {
     console.log(`Server started successfully at ${PORT}`);
@@ -32,3 +32,7 @@ dbConnect();
 app.get("/", (req, res) => {
     res.send(`<h1> This is homepage <h1>`);
 });
+
+app.post("/car", (req,res) => {
+    res.send("Received a post request")
+})
