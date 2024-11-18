@@ -4,11 +4,9 @@ const express = require("express");
 // Create a new router object using express.Router()
 const router = express.Router();
 
-// Import the createTodo function from the createTodo controller
+const {createComment} = require("../controllers/CommentController")
 
- 
-// Define a POST route for creating a Todo
-
+router.post("/comments/create",createComment)
 
 // Export the router object so it can be used in other parts of the application
 module.exports = router;

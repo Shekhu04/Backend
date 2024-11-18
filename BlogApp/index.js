@@ -17,7 +17,7 @@ app.use(express.json());
 const blog = require("./routes/blog");
 
 // Use the imported routes for any requests starting with /api/v1
-//app.use("/api/v1", blog);
+app.use("/api/v1", blog);
 
 // Start the server and listen on the specified port
 app.listen(PORT, () => {
